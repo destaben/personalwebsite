@@ -1,0 +1,8 @@
+.terraform
+*.tfvars
+*.tfstate*
+node_modules/
+.cache/
+public/
+*-lock.json
+*.zip

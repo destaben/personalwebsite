@@ -1,0 +1,39 @@
+- profile:
+  initials: DE
+  name: David Estabén
+  profession: Site Reliability Engineer
+  image: images/profile.jpg
+  location: Zaragoza, Spain
+  relocation: false
+  company: Adidas
+  for_hire: false
+  focus: AWS SysOps Certification
+  focus_url: https://aws.amazon.com/es/certification/certified-sysops-admin-associate/
+  about: |
+    During my professional career I have developed different skills, in the last few years I have focused my personal development on different new methodologies that approach IT systems from a user impact point of view.
+    
+    My work mostly consists of understanding processes and transforming them into code, involving code and infrastructure.
+
+    Feel free to reach out me if you need more information.
+  skills:
+    - Orchestration
+    - Virtualization
+    - Observability
+    - Scripting
+    - Web Development
+    - Agile
+  tools:
+    - Terraform
+    - Kubernetes
+    - AWS
+    - Jenkins
+    - Helm
+    - Prometheus
+    - Grafana
+    - Instana
+    - New Relic
+  budget:
+    currency: €
+    min: 3
+    max: 100
+    default: 4

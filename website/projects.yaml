@@ -1,0 +1,19 @@
+- name: SRE Challenge
+  url: https://github.com/destaben/challenge-sre
+  description: Adidas challenge to join the company
+  status: Done
+  tags:
+    - AWS
+    - Terraform
+    - EKS
+  icon: github
+
+- name: Personal Website
+  url: https://github.com/destaben/personalwebsite
+  description: Code from this website, Infrastructure and Gatsby generation.
+  status: Done
+  tags:
+    - AWS
+    - Terraform
+    - Gatsby
+  icon: github
