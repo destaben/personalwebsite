@@ -10,7 +10,7 @@ resource "aws_s3_bucket" "website" {
     cors_rule {
     allowed_headers = ["Authorization", "Content-Length"]
     allowed_methods = ["GET", "POST"]
-    allowed_origins = ["https://www.${var.domain_name}"]
+    allowed_origins = ["https://${var.domain_name}"]
     max_age_seconds = 3000
   }
 
@@ -37,20 +37,6 @@ resource "aws_s3_bucket_policy" "public_read" {
       },
     ]
   })
-}
-
-resource "aws_s3_bucket" "website_redirect" {
-  bucket = "www.${var.domain_name}"
-  acl    = "public-read"
-
-  website {
-    redirect_all_requests_to = "https://${var.domain_name}"
-  }
-
-  tags = {
-    Name        = "Website"
-    Environment = var.environment
-  }
 }
 
 resource "null_resource" "upload_to_s3" {

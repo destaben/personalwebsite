@@ -30,7 +30,7 @@ module.exports = {
           defer: false,
           sampleRate: 5,
           siteSpeedSampleRate: 10,
-          cookieDomain: "destaben.dev",
+          cookieDomain: "info.destaben.dev",
         },
       }
     ],
