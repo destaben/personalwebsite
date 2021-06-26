@@ -3,6 +3,7 @@
 ## Prerequisites:
 - Node 12 - sudo apt -y install nodejs
 - Terraform cli v0.13 (https://learn.hashicorp.com/tutorials/terraform/install-cli)
+- AWS programatic user with AmazonS3FullAccess, CloudFrontFullAccess and AWSCertificateManagerFullAccess.
 
 ## Steps:
 - terraform init
