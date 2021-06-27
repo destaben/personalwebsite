@@ -39,6 +39,16 @@ resource "aws_s3_bucket_policy" "public_read" {
   })
 }
 
+resource "aws_s3_bucket" "log_bucket" {
+  bucket = "logs-${var.domain_name}"
+  acl    = "log-delivery-write"
+
+  tags = {
+    Name        = "Website"
+    Environment = var.environment
+  }
+}
+
 resource "null_resource" "upload_to_s3" {
   depends_on = [null_resource.gastby_build]
 
@@ -47,6 +57,6 @@ resource "null_resource" "upload_to_s3" {
   }
 
   provisioner "local-exec" {
-    command = "aws s3 sync public/ s3://${aws_s3_bucket.website.id}"
+    command = "AWS_ACCESS_KEY_ID=${var.aws_access_key} AWS_SECRET_ACCESS_KEY=${var.aws_secret_key} aws s3 sync public/ s3://${aws_s3_bucket.website.id}"
   }
 }

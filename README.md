@@ -7,9 +7,9 @@
 
 ## Steps:
 - terraform init
-- terraform apply -var-file=./pro.tfvars (Check table)
+- terraform apply -var-file=./pro.tfvars (Check table pro.tfvars)
 - Wait until aws_acm_certificate_validation.cert_validation resource creation procress, get into AWS and create needed CNAME in DNS provider.
-- Create a CNAME record in your DNS provider with your domain_name value and the output from this command: terraform state show aws_cloudfront_distribution.s3_distribution | grep ^domain_name
+- Create a CNAME record in your DNS provider with your domain_name value and Cloudfront distribution endpoint, instructions with values will be shown as final output.
 
 ## Terraform 0.13 Providers
 

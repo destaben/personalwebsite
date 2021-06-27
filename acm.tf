@@ -1,5 +1,4 @@
 resource "aws_acm_certificate" "ssl_certificate" {
-  depends_on = [ null_resource.upload_to_s3 ]
   domain_name = var.domain_name
   validation_method = "DNS"
 

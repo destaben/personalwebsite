@@ -12,6 +12,12 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
   enabled         = true
   is_ipv6_enabled = true
+  price_class     = "PriceClass_100"
+
+  logging_config {
+    include_cookies = false
+    bucket          = aws_s3_bucket.log_bucket.bucket_domain_name 
+  }
 
   aliases = [var.domain_name]
 
@@ -30,10 +36,10 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
       headers = ["Origin"]
     }
 
-    viewer_protocol_policy = "allow-all"
+    viewer_protocol_policy = "redirect-to-https"
     min_ttl                = 0
-    default_ttl            = 86400
-    max_ttl                = 31536000
+    default_ttl            = 3600
+    max_ttl                = 86400
   }
 
   restrictions {
