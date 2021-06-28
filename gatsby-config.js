@@ -16,19 +16,6 @@ module.exports = {
         },
       },
       {
-        resolve: "gatsby-plugin-google-analytics",
-        options: {
-          trackingId: "G-E2VDW2HM59",
-          head: false,
-          anonymize: true,
-          respectDNT: true,
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
-          pageTransitionDelay: 0,
-          defer: false,
-          sampleRate: 5,
-          siteSpeedSampleRate: 10,
-          cookieDomain: "info.destaben.dev",
-        },
         resolve: "gatsby-plugin-manifest",
         options: {
           name: "David Estabén",
