@@ -5,10 +5,9 @@
 - Terraform cli v0.13 (https://learn.hashicorp.com/tutorials/terraform/install-cli)
 - awscli v2 (https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
 - AWS programatic user with AmazonS3FullAccess, CloudFrontFullAccess, AWSCertificateManagerFullAccess, IAMFullAccess, AmazonSNSFullAccess, CodeBuildFullAccess, AWSCodePipeline_FullAccess and CloudWatchFullAccess.
-
-
-
- 
+- Github account with access token created (https://github.com/settings/tokens), with the following permissions:
+    - admin:repo_hook
+    - repo
 
 ## Steps:
 - terraform init
@@ -33,6 +32,9 @@
 |location                   |Region                                                           |'string'             |
 |environment                |Environment name                                                 |'string'             |
 |domain_name                |Domain name                                                      |'string'             |
+|github_owner               |Github owner nickname                                            |'string'             |
+|github_token               |Generated GitHub token                                           |'string'             |
+|alerting_sms_number        |Phone number to alert                                            |'string'             |
 
 ## Additional information
 Using this theme: https://github.com/wkocjan/gatsby-theme-intro
