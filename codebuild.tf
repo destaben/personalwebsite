@@ -28,11 +28,6 @@ resource "aws_codebuild_project" "project_cb" {
     type                        = "LINUX_CONTAINER"
 
     environment_variable {
-        name  = "TF_VERSION"
-        value = "0.15"
-    }
-
-    environment_variable {
         name  = "AWS_ACCESS_KEY"
         value = var.aws_access_key
     }

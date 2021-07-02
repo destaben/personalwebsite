@@ -22,6 +22,7 @@
 |     aws      |  ~> 3.44.0  |
 |   archive    |  ~> 2.2.0   |
 |    null      |  ~> 3.1.0   |
+|   github     |  ~> 4.12.1  |
 
 ## pro.tfvars
 

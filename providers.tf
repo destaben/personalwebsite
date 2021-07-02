@@ -18,7 +18,3 @@ provider "github" {
   owner   = var.github_owner
   version = "~> 4.12.1"
 }
-
-provider "template" {
-  version    = "~> 2.2.0"
-}
