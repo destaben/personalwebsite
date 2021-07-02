@@ -5,14 +5,11 @@ phases:
     runtime-versions:
       python: 3.8
     commands:
-      - cd /usr/bin
       - curl -s -qL -o terraform.zip https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
       - unzip -o terraform.zip
 
   build:
     commands:
-      - pwd
-      - ls -lah
       - terraform init
       - terraform plan -out=tfplan -var-file=./pro.tfvars -var='aws_access_key=${AWS_ACCESS_KEY}' -var='aws_secret_key=${AWS_SECRET_KEY}' -var='github_token=${GITHUB_TOKEN}' -var='alerting_sms_number=${ALERTING_SMS_NUMBER}'
       - terraform apply tfplan
