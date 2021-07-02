@@ -12,3 +12,13 @@ provider "null" {
 provider "archive" {
   version    = "~> 2.2.0"
 }
+
+provider "github" {
+  token   = var.github_token
+  owner   = var.github_owner
+  version = "~> 4.12.1"
+}
+
+provider "template" {
+  version    = "~> 2.2.0"
+}

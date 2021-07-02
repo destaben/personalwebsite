@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "website" {
     Environment = var.environment
   }
 
-    cors_rule {
+  cors_rule {
     allowed_headers = ["Authorization", "Content-Length"]
     allowed_methods = ["GET", "POST"]
     allowed_origins = ["https://${var.domain_name}"]
@@ -59,4 +59,9 @@ resource "null_resource" "upload_to_s3" {
   provisioner "local-exec" {
     command = "AWS_ACCESS_KEY_ID=${var.aws_access_key} AWS_SECRET_ACCESS_KEY=${var.aws_secret_key} aws s3 sync public/ s3://${aws_s3_bucket.website.id}"
   }
+}
+
+resource "aws_s3_bucket" "artifacts_bucket" {
+  bucket        = "${var.domain_name}-artifact-build"
+  acl           = "private"
 }

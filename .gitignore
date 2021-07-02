@@ -1,5 +1,5 @@
 .terraform
-*.tfvars
+full.tfvars
 *.tfstate*
 node_modules/
 .cache/
