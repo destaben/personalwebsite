@@ -29,7 +29,7 @@
 |---------------------------|-----------------------------------------------------------------|---------------------|
 |aws_access_key             |AWS access key                                                   |'string'             |
 |aws_secret_key             |AWS secret key                                                   |'string'             |
-|location                   |Region                                                           |'string'             |
+|aws_region                 |Region                                                           |'string'             |
 |environment                |Environment name                                                 |'string'             |
 |domain_name                |Domain name                                                      |'string'             |
 |github_owner               |Github owner nickname                                            |'string'             |
