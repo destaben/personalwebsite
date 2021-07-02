@@ -21,7 +21,7 @@ resource "aws_codepipeline" "rest_pipeline" {
         "Branch"               = "main"
         "Owner"                = "destaben"
         "PollForSourceChanges" = "false"
-        "Repo"                 = "pesrsonalwebsite"
+        "Repo"                 = "personalwebsite"
         "OAuthToken"           = var.github_token
       }
       input_artifacts = []
