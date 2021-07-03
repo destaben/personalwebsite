@@ -1,4 +1,4 @@
-.terraform
+.terraform*
 full.tfvars
 *.tfstate*
 node_modules/
