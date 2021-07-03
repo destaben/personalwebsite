@@ -4,10 +4,11 @@
 - Node 12 - sudo apt -y install nodejs
 - Terraform cli v0.13 (https://learn.hashicorp.com/tutorials/terraform/install-cli)
 - awscli v2 (https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
-- AWS programatic user with AmazonS3FullAccess, CloudFrontFullAccess, AWSCertificateManagerFullAccess, IAMFullAccess, AmazonSNSFullAccess, CodeBuildFullAccess, AWSCodePipeline_FullAccess and CloudWatchFullAccess.
+- AWS programatic user with AmazonS3FullAccess, CloudFrontFullAccess, AWSCertificateManagerFullAccess, IAMFullAccess, AmazonSNSFullAccess, CodeBuildFullAccess, AWSCodePipeline_FullAccess, AmazonDynamoDBFullAccess and CloudWatchFullAccess.
 - Github account with access token created (https://github.com/settings/tokens), with the following permissions:
     - admin:repo_hook
     - repo
+- Create an S3 bucket and a DynamoDB to use in backend configuration, names need to be change in backend.tfvars file.
 
 ## Steps:
 - terraform init
