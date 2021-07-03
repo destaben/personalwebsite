@@ -10,9 +10,9 @@ phases:
 
   build:
     commands:
-      - terraform init
-      - terraform plan -out=tfplan -var-file=./pro.tfvars -var='aws_access_key=${AWS_ACCESS_KEY}' -var='aws_secret_key=${AWS_SECRET_KEY}' -var='github_token=${GITHUB_TOKEN}' -var='alerting_sms_number=${ALERTING_SMS_NUMBER}'
-      - terraform apply tfplan
+      - $PWD/terraform init
+      - $PWD/terraform plan -out=tfplan -var-file=pro.tfvars -var='aws_access_key=${AWS_ACCESS_KEY}' -var='aws_secret_key=${AWS_SECRET_KEY}' -var='github_token=${GITHUB_TOKEN}' -var='alerting_sms_number=${ALERTING_SMS_NUMBER}'
+      - $PWD/terraform apply tfplan
 
   post_build:
     commands:
