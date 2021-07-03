@@ -28,8 +28,13 @@ resource "aws_codebuild_project" "project_cb" {
     type                        = "LINUX_CONTAINER"
 
     environment_variable {
-        name  = "AWS_ACCESS_KEY"
-        value = var.aws_access_key
+      name  = "AWS_REGION"
+      value = var.aws_region
+    }
+
+    environment_variable {
+      name  = "AWS_ACCESS_KEY"
+      value = var.aws_access_key
     }
 
     environment_variable {
