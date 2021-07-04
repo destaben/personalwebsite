@@ -7,9 +7,9 @@ phases:
     commands:
       - echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf && sysctl -p
       - export NODE_OPTIONS=--max_old_space_size=14336
-      - pip3 install --upgrade --user awscli
-      - export PATH=$HOME/.local/bin:$PATH
-      - source ~/.bash_profile
+      - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      - unzip awscliv2.zip
+      - ./aws/install
       - npm install --prefix website/
       - curl -s -qL -o terraform.zip https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
       - unzip -o terraform.zip
