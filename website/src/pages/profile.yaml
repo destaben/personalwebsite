@@ -2,7 +2,7 @@
   initials: DE
   name: David Estabén
   profession: Site Reliability Engineer
-  image: images/profile.jpg
+  image: src/profile.jpg
   location: Zaragoza, Spain
   relocation: false
   company: Adidas
