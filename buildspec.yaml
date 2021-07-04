@@ -11,10 +11,12 @@ phases:
 
   build:
     commands:
-      - webiste/node_modules/.bin/gatsby build --no-colors
+      - cd website/
+      - node_modules/.bin/gatsby build --no-colors
 
   post_build:
     commands:
+      - cd ../infrastructure
       - aws dynamodb create-table –table-name $DYNAMODB_NAME –attribute-definitions AttributeName=LockID,AttributeType=S –key-schema AttributeName=LockID,KeyType=HASH –provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
       - aws s3api create-bucket –bucket $BUCKET_NAME –region $AWS_REGION –create-bucket-configuration LocationConstraint=$AWS_REGION
       - aws s3api put-bucket-encryption –bucket $BUCKET_NAME –server-side-encryption-configuration "{\"Rules\": [{\"ApplyServerSideEncryptionByDefault\":{\"SSEAlgorithm\": \"AES256\"}}]}
