@@ -51,6 +51,7 @@ phases:
 cache:
   paths:
     - 'webiste/node_modules/**/*'
+    - 'webiste/.cache/*'
 
 artifacts:
   files:
