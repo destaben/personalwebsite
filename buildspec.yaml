@@ -5,6 +5,7 @@ phases:
     runtime-versions:
       python: 3.8
     commands:
+      - export NODE_OPTIONS=--max_old_space_size=6144
       - npm install --prefix website/
       - curl -s -qL -o terraform.zip https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
       - unzip -o terraform.zip
@@ -13,7 +14,6 @@ phases:
     commands:
       - cd website/
       - echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf && sysctl -p
-      - export NODE_OPTIONS=--max_old_space_size=4096
       - node_modules/.bin/gatsby build --no-colors
 
   post_build:
