@@ -6,13 +6,14 @@ phases:
       python: 3.8
     commands:
       - echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf && sysctl -p
-      - export NODE_OPTIONS=--max_old_space_size=14336
+      - export NODE_OPTIONS=--max_old_space_size=15000
       - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
       - unzip awscliv2.zip
       - ./aws/install
+      - aws --version
       - npm install --prefix website/
       - curl -s -qL -o terraform.zip https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
-      - unzip -o terraform.zip
+      - unzip terraform.zip
 
   build:
     commands:
