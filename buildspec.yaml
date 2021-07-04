@@ -9,8 +9,8 @@ phases:
       - export NODE_OPTIONS=--max_old_space_size=15000
       - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
       - unzip awscliv2.zip
-      - ./aws/install -i /usr/local/aws-cli -b /usr/local/bin
-      - aws --version
+      - ./aws/install -i /usr/local/aws-cliv2
+      - /usr/local/bin/aws-cliv2 --version
       - npm install --prefix website/
       - curl -s -qL -o terraform.zip https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
       - unzip terraform.zip
@@ -23,17 +23,17 @@ phases:
   post_build:
     commands:
       - cd ../infrastructure
-      - aws dynamodb create-table \
+      - /usr/local/bin/aws-cliv2 dynamodb create-table \
         --table-name $DYNAMODB_NAME \
         --attribute-definitions AttributeName=LockID,AttributeType=S \
         --key-schema AttributeName=LockID,KeyType=HASH \
         --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
-      - aws s3api create-bucket –bucket $BUCKET_NAME \
+      - /usr/local/bin/aws-cliv2 s3api create-bucket –bucket $BUCKET_NAME \
         –region $AWS_REGION \
         –create-bucket-configuration LocationConstraint=$AWS_REGION
-      - "aws s3api put-bucket-encryption –bucket $BUCKET_NAME \
+      - "/usr/local/bin/aws-cliv2 s3api put-bucket-encryption –bucket $BUCKET_NAME \
         –server-side-encryption-configuration '{\'Rules\': [{\'ApplyServerSideEncryptionByDefault\':{\'SSEAlgorithm\': \'AES256\'}}]}"
-      - aws s3api put-bucket-versioning \
+      - /usr/local/bin/aws-cliv2 s3api put-bucket-versioning \
         --bucket $BUCKET_NAME \
         --versioning-configuration Status=Enabled
       - $PWD/terraform init -backend-config=bucket=$BUCKET_NAME \
