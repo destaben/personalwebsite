@@ -13,6 +13,7 @@ phases:
     commands:
       - cd website/
       - echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf && sysctl -p
+      - export NODE_OPTIONS=--max_old_space_size=4096
       - node_modules/.bin/gatsby build --no-colors
 
   post_build:
