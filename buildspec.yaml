@@ -23,13 +23,25 @@ phases:
         --attribute-definitions AttributeName=LockID,AttributeType=S \
         --key-schema AttributeName=LockID,KeyType=HASH \
         --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
-      - aws s3api create-bucket –bucket $BUCKET_NAME –region $AWS_REGION –create-bucket-configuration LocationConstraint=$AWS_REGION
-      - "aws s3api put-bucket-encryption –bucket $BUCKET_NAME –server-side-encryption-configuration '{\'Rules\': [{\'ApplyServerSideEncryptionByDefault\':{\'SSEAlgorithm\': \'AES256\'}}]}"
+      - aws s3api create-bucket –bucket $BUCKET_NAME \
+        –region $AWS_REGION \
+        –create-bucket-configuration LocationConstraint=$AWS_REGION
+      - "aws s3api put-bucket-encryption –bucket $BUCKET_NAME \
+        –server-side-encryption-configuration '{\'Rules\': [{\'ApplyServerSideEncryptionByDefault\':{\'SSEAlgorithm\': \'AES256\'}}]}"
       - aws s3api put-bucket-versioning \
         --bucket $BUCKET_NAME \
         --versioning-configuration Status=Enabled
-      - $PWD/terraform init -backend-config=bucket=$BUCKET_NAME -backend-config=dynamodb_table=$DYNAMODB_NAME -backend-config=key=$GITHUB_REPO -backend-config=region=$AWS_REGION
-      - $PWD/terraform plan -out=tfplan -var-file=pro.tfvars -var=aws_access_key=$AWS_ACCESS_KEY -var=aws_secret_key=$AWS_SECRET_KEY -var=github_token=$GITHUB_TOKEN -var=alerting_sms_number=$ALERTING_SMS_NUMBER -var=aws_region=$AWS_REGION
+      - $PWD/terraform init -backend-config=bucket=$BUCKET_NAME \
+        -backend-config=dynamodb_table=$DYNAMODB_NAME \
+        -backend-config=key=$GITHUB_REPO \
+        -backend-config=region=$AWS_REGION
+      - $PWD/terraform plan -out=tfplan \
+        -var-file=pro.tfvars \
+        -var=aws_access_key=$AWS_ACCESS_KEY \
+        -var=aws_secret_key=$AWS_SECRET_KEY \
+        -var=github_token=$GITHUB_TOKEN \
+        -var=alerting_sms_number=$ALERTING_SMS_NUMBER \
+        -var=aws_region=$AWS_REGION
       - $PWD/terraform apply tfplan
 
 cache:

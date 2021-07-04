@@ -1,5 +1,6 @@
 .terraform*
 full.tfvars
+backend.tfvars
 *.tfstate*
 node_modules/
 .cache/
