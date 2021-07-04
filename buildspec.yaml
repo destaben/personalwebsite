@@ -12,6 +12,7 @@ phases:
   build:
     commands:
       - cd website/
+      - echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
       - node_modules/.bin/gatsby build --no-colors
 
   post_build:
