@@ -49,18 +49,6 @@ resource "aws_s3_bucket" "log_bucket" {
   }
 }
 
-resource "null_resource" "upload_to_s3" {
-  depends_on = [null_resource.gastby_build]
-
-  triggers = {
-    src_hash = data.archive_file.init.output_sha
-  }
-
-  provisioner "local-exec" {
-    command = "AWS_ACCESS_KEY_ID=${var.aws_access_key} AWS_SECRET_ACCESS_KEY=${var.aws_secret_key} aws s3 sync public/ s3://${aws_s3_bucket.website.id}"
-  }
-}
-
 resource "aws_s3_bucket" "artifacts_bucket" {
   bucket        = "${var.domain_name}-artifact-build"
   acl           = "private"

@@ -19,9 +19,9 @@ resource "aws_codepipeline" "rest_pipeline" {
       category = "Source"
       configuration = {
         "Branch"               = "main"
-        "Owner"                = "destaben"
+        "Owner"                = var.github_owner
         "PollForSourceChanges" = "false"
-        "Repo"                 = "personalwebsite"
+        "Repo"                 = var.github_repo
         "OAuthToken"           = var.github_token
       }
       input_artifacts = []

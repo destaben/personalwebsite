@@ -20,7 +20,7 @@ resource "aws_codepipeline_webhook" "bar" {
 }
 
 resource "github_repository_webhook" "bar" {
-  repository = "personalwebsite"
+  repository = var.github_repo
 
   configuration {
     url          = aws_codepipeline_webhook.bar.url

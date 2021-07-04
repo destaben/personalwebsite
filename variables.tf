@@ -23,6 +23,11 @@ variable "github_token" {
   description = "Github token"
 }
 
+variable "github_repo" {
+  type        = string
+  description = "Github repo"
+}
+
 variable "github_owner" {
   type        = string
   description = "Github owner"

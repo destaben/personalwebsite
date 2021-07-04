@@ -4,10 +4,6 @@ provider "aws" {
   secret_key = var.aws_secret_key
 }
 
-provider "null" {}
-
-provider "archive" {}
-
 provider "github" {
   token   = var.github_token
   owner   = var.github_owner
@@ -20,14 +16,6 @@ terraform {
     aws = {
       source = "hashicorp/aws"
       version = "~> 3.48.0"
-    }
-    null = {
-      source = "hashicorp/null"
-      version = "~> 3.1.0"
-    }
-    archive = {
-      source = "hashicorp/archive"
-      version = "~> 2.2.0"
     }
     github = {
       source = "integrations/github"

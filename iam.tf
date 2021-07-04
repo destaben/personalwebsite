@@ -23,7 +23,7 @@ resource "aws_iam_role" "pipeline_role" {
 
 resource "aws_iam_policy" "pipeline_policy" {
   description = "Policy used in trust relationship with CodePipeline"
-  name        = "web-pipeline-policy-${var.environment}"
+  name        = "pipeline-policy-${var.environment}"
   path        = "/service-role/"
   policy = jsonencode(
     {
@@ -107,6 +107,10 @@ resource "aws_iam_policy" "build_policy" {
         {
           "Effect" = "Allow",
           "Action" = [
+            "dynamodb:PutItem",
+            "dynamodb:DeleteItem",
+            "dynamodb:GetItem",
+            "dynamodb:CreateTable",
             "cloudfront:*",
             "acm:*"
           ],

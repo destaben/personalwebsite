@@ -1,5 +1,3 @@
-data "aws_caller_identity" "current" {}
-
 resource "aws_codebuild_project" "project_cb" {
   badge_enabled  = false
   build_timeout  = 60
@@ -51,6 +49,23 @@ resource "aws_codebuild_project" "project_cb" {
       name  = "ALERTING_SMS_NUMBER"
       value = var.alerting_sms_number
     }
+
+    environment_variable {
+      name  = "DYNAMODB_NAME"
+      value = "dynamo-${var.domain_name}"
+    }
+
+    environment_variable {
+      name  = "BUCKET_NAME"
+      value = "tfstate-${var.domain_name}"
+    }
+
+    environment_variable {
+      name  = "GITHUB_REPO"
+      value = var.github_repo
+    }
+
+    
   }
 
   logs_config {
