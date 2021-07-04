@@ -57,4 +57,22 @@ resource "aws_codepipeline" "rest_pipeline" {
       version   = "1"
     }
   }
+
+  stage {
+    name = "Deploy"
+
+    action {
+      name            = "Deploy"
+      category        = "Deploy"
+      owner           = "AWS"
+      provider        = "S3"
+      input_artifacts = ["BuildArtifact"]
+      version         = "1"
+
+      configuration = {
+        BucketName = aws_s3_bucket.website.bucket_domain_name
+        Extract    = "true"
+      }
+    }
+  }
 }
