@@ -8,12 +8,12 @@ phases:
       - echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf && sysctl -p
       - export NODE_OPTIONS=--max_old_space_size=15000
       - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-      - unzip awscliv2.zip
+      - unzip -qq awscliv2.zip
       - ./aws/install -i /usr/local/aws-cli -b /usr/local/bin
       - /usr/local/bin/aws --version
       - npm install --prefix website/
       - curl -s -qL -o terraform.zip https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
-      - unzip terraform.zip
+      - unzip -qq terraform.zip
 
   build:
     commands:
