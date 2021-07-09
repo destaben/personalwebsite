@@ -29,7 +29,7 @@ phases:
         fi
       - rm -rf /usr/local/go
       - curl -s -qL https://golang.org/dl/go1.16.5.linux-amd64.tar.gz
-      - tar -C /usr/local -xzf go1.16.5.linux-amd64.tar.gz
+      - tar -C /usr/local -xzf ./go1.16.5.linux-amd64.tar.gz
       - git clone https://github.com/gohugoio/hugo.git
       - cd hugo
       - go install --tags extended
