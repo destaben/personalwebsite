@@ -28,12 +28,12 @@ phases:
           echo "$BUCKET_NAME already exists"
         fi
       - git clone https://github.com/gohugoio/hugo.git
-      - mv hugo/ .
+      - cd hugo
       - go install --tags extended
 
   build:
     commands:
-      - cd website/
+      - cd ../website
       - git init
       - git submodule add https://github.com/hugo-toha/toha.git themes/toha
       - hugo
