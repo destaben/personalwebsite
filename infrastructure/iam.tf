@@ -107,6 +107,7 @@ resource "aws_iam_policy" "build_policy" {
         {
           "Effect" = "Allow",
           "Action" = [
+            "dynamodb:DescribeTable",
             "dynamodb:PutItem",
             "dynamodb:DeleteItem",
             "dynamodb:GetItem",
