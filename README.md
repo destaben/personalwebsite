@@ -9,6 +9,7 @@ Full code of my website.
 - Create an S3 bucket and a DynamoDB to use in backend configuration, using "./create_terraform_backend.sh $DYNAMODB_NAME $BUCKET_NAME &$AWS_REGION"
 
 ## First configuration:
+- aws configure (Credentials from previous user)
 - terraform init -backend-config=backend.tfvars
 - cd infrastructure
 - terraform plan -target module.build -out=tfplan -var-file=./pro.tfvars
@@ -28,8 +29,6 @@ Full code of my website.
 
 |          Nombre           |                        Descripción                              |        Tipo         |
 |---------------------------|-----------------------------------------------------------------|---------------------|
-|aws_access_key             |AWS access key                                                   |'string'             |
-|aws_secret_key             |AWS secret key                                                   |'string'             |
 |aws_region                 |Region                                                           |'string'             |
 |environment                |Environment name                                                 |'string'             |
 |domain_name                |Domain name                                                      |'string'             |
