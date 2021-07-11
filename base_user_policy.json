@@ -26,6 +26,8 @@
                 "iam:ListInstanceProfilesForRole",
                 "iam:CreatePolicy",
                 "iam:DeletePolicy",
+                "iam:CreatePolicyVersion",
+                "iam:DeletePolicyVersion",
                 "iam:ListAttachedRolePolicies",
                 "iam:AttachRolePolicy",
                 "iam:ListRolePolicies",

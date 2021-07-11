@@ -81,7 +81,8 @@ resource "aws_iam_policy" "build_policy" {
         {
           "Effect" = "Allow",
           "Action" = [
-            "cloudfront:*"
+            "cloudfront:*",
+            "sns:*"
           ],
           "Resource" = [
             "*"
