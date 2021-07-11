@@ -26,6 +26,11 @@ resource "aws_codebuild_project" "project_cb" {
     type                        = "LINUX_CONTAINER"
 
     environment_variable {
+      name  = "AWS_REGION"
+      value = var.aws_region
+    }
+
+    environment_variable {
       name  = "GITHUB_TOKEN"
       value = var.github_token
     }

@@ -56,6 +56,7 @@
                 "codepipeline:GetPipeline",
                 "codebuild:CreateProject",
                 "codebuild:DeleteProject",
+                "codebuild:UpdateProject",
                 "codebuild:BatchGetProjects",
                 "codedeploy:CreateDeployment",
                 "codedeploy:GetApplicationRevision",
