@@ -1,0 +1,14 @@
+name: "John Doe"
+nickname: "John"
+greeting: "Hi, I am"
+image: "images/author/john.png"
+contactInfo:
+  email: "johndoe@example.com"
+  phone: "+0123456789"
+
+summary:
+  - I am a Developer
+  - I am a Devops
+  - I love servers
+  - I work on open-source projects
+  - I love to work with some fun projects
