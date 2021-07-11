@@ -20,7 +20,7 @@ phases:
   post_build:
     commands:
       - cd ../infrastructure/
-      - $PWD/terraform init -backend-config=bucket=$BUCKET_NAME -backend-config=dynamodb_table=$DYNAMODB_NAME -backend-config=key=$GITHUB_REPO
+      - $PWD/terraform init -backend-config=bucket=$BUCKET_NAME -backend-config=dynamodb_table=$DYNAMODB_NAME -backend-config=key=$GITHUB_REPO -backend-config=region=$AWS_REGION
       - $PWD/terraform plan -out=tfplan -var-file=pro.tfvars -var=github_token=$GITHUB_TOKEN -var=alerting_sms_number=$ALERTING_SMS_NUMBER
       - $PWD/terraform apply tfplan
 

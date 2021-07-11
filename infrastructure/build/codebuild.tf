@@ -39,7 +39,6 @@ resource "aws_codebuild_project" "project_cb" {
       name  = "GITHUB_REPO"
       value = var.github_repo
     }
-
     
     environment_variable {
       name  = "DYNAMODB_NAME"
