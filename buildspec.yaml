@@ -21,10 +21,10 @@ phases:
     commands:
       - cd ../infrastructure/
       - $PWD/terraform init -backend-config=bucket=$BUCKET_NAME -backend-config=dynamodb_table=$DYNAMODB_NAME -backend-config=key=$GITHUB_REPO -backend-config=region=$AWS_REGION
-      - $PWD/terraform plan -out=tfplan -var-file=pro.tfvars -var=aws_region=$AWS_REGION -var=github_token=$GITHUB_TOKEN -var=alerting_sms_number=$ALERTING_SMS_NUMBER
+      - $PWD/terraform plan -target module.frontend -out=tfplan -var-file=pro.tfvars -var=aws_region=$AWS_REGION -var=github_token=$GITHUB_TOKEN -var=alerting_sms_number=$ALERTING_SMS_NUMBER
       - $PWD/terraform apply tfplan
 
 artifacts:
   files:
     - '**/*'
-  base-directory: public
+  base-directory: website/public/
