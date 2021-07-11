@@ -70,7 +70,7 @@ resource "aws_codepipeline" "rest_pipeline" {
       version         = "1"
 
       configuration = {
-        BucketName = aws_s3_bucket.website.bucket_domain_name
+        BucketName = var.domain_name
         Extract    = "true"
       }
     }
