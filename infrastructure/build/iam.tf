@@ -107,17 +107,6 @@ resource "aws_iam_policy" "build_policy" {
         {
           "Effect" = "Allow",
           "Action" = [
-            "dynamodb:DescribeTable",
-            "dynamodb:PutItem",
-            "dynamodb:DeleteItem",
-            "dynamodb:GetItem",
-            "dynamodb:CreateTable",
-            "codedeploy:CreateDeployment",
-            "codedeploy:GetApplication",
-            "codedeploy:GetApplicationRevision",
-            "codedeploy:GetDeployment",
-            "codedeploy:GetDeploymentConfig",
-            "codedeploy:RegisterApplicationRevision",
             "cloudfront:*",
             "acm:*"
           ],

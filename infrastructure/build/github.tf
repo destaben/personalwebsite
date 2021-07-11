@@ -1,4 +1,4 @@
-resource "aws_codepipeline_webhook" "bar" {
+resource "aws_codepipeline_webhook" "aws_webhook" {
   name            = replace("${var.domain_name}-repo-github-webhook", ".", "-")
   authentication  = "GITHUB_HMAC"
   target_action   = "Source"
@@ -19,11 +19,11 @@ resource "aws_codepipeline_webhook" "bar" {
   )
 }
 
-resource "github_repository_webhook" "bar" {
+resource "github_repository_webhook" "git_webhook" {
   repository = var.github_repo
 
   configuration {
-    url          = aws_codepipeline_webhook.bar.url
+    url          = aws_codepipeline_webhook.aws_webhook.url
     content_type = "json"
     insecure_ssl = true
     secret       = var.github_token

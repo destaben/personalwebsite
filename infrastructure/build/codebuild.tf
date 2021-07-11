@@ -26,21 +26,6 @@ resource "aws_codebuild_project" "project_cb" {
     type                        = "LINUX_CONTAINER"
 
     environment_variable {
-      name  = "AWS_REGION"
-      value = var.aws_region
-    }
-
-    environment_variable {
-      name  = "AWS_ACCESS_KEY"
-      value = var.aws_access_key
-    }
-
-    environment_variable {
-      name  = "AWS_SECRET_KEY"
-      value = var.aws_secret_key
-    }
-
-    environment_variable {
       name  = "GITHUB_TOKEN"
       value = var.github_token
     }
@@ -51,6 +36,12 @@ resource "aws_codebuild_project" "project_cb" {
     }
 
     environment_variable {
+      name  = "GITHUB_REPO"
+      value = var.github_repo
+    }
+
+    
+    environment_variable {
       name  = "DYNAMODB_NAME"
       value = "dynamo-${var.domain_name}"
     }
@@ -59,12 +50,6 @@ resource "aws_codebuild_project" "project_cb" {
       name  = "BUCKET_NAME"
       value = "tfstate-${var.domain_name}"
     }
-
-    environment_variable {
-      name  = "GITHUB_REPO"
-      value = var.github_repo
-    }
-
     
   }
 

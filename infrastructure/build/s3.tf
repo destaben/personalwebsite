@@ -39,16 +39,6 @@ resource "aws_s3_bucket_policy" "public_read" {
   })
 }
 
-resource "aws_s3_bucket" "log_bucket" {
-  bucket = "logs-${var.domain_name}"
-  acl    = "log-delivery-write"
-
-  tags = {
-    Name        = "Website"
-    Environment = var.environment
-  }
-}
-
 resource "aws_s3_bucket" "artifacts_bucket" {
   bucket        = "${var.domain_name}-artifact-build"
   acl           = "private"
