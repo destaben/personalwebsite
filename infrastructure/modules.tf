@@ -4,6 +4,8 @@ module "frontend" {
   environment          = var.environment
   domain_name          = var.domain_name
   alerting_sms_number  = var.alerting_sms_number
+  website_endpoint     = module.build.website_endpoint
+  certificate_arn      = module.build.certificate_arn
 }
 
 module "build" {
