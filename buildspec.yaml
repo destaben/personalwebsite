@@ -12,14 +12,14 @@ phases:
 
   build:
     commands:
-      - cd ../website
+      - cd website/
       - git init
       - git submodule add https://github.com/hugo-toha/toha.git themes/toha
       - hugo
 
   post_build:
     commands:
-      - cd ../infrastructure/aws
+      - cd ../infrastructure/
       - $PWD/terraform init -backend-config=bucket=$BUCKET_NAME -backend-config=dynamodb_table=$DYNAMODB_NAME -backend-config=key=$GITHUB_REPO
       - $PWD/terraform plan -out=tfplan -var-file=pro.tfvars -var=github_token=$GITHUB_TOKEN -var=alerting_sms_number=$ALERTING_SMS_NUMBER
       - $PWD/terraform apply tfplan
