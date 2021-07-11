@@ -74,7 +74,8 @@
                 "acm:Delete*",
                 "acm:Request*",
                 "acm:List*",
-                "acm:Put*"
+                "acm:Put*",
+                "acm:Describe*"
             ],
             "Resource": "*"
         }
