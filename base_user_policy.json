@@ -48,6 +48,7 @@
                 "s3:DeleteBucketPolicy",
                 "codepipeline:CreatePipeline",
                 "codepipeline:DeletePipeline",
+                "codepipeline:UpdatePipeline",
                 "codepipeline:PutWebhook",
                 "codepipeline:DeleteWebhook",
                 "codepipeline:ListWebhooks",
