@@ -26,3 +26,8 @@ variable "alerting_sms_number" {
   type        = string
   description = "SMS for alerting"
 }
+
+variable "user_policy_arn" {
+  type        = string
+  description = "ARN policy programatic user"
+}

@@ -30,26 +30,9 @@ resource "aws_iam_policy" "pipeline_policy" {
       Statement : [
         {
           Action : [
-            "iam:PassRole"
-          ],
-          Resource : "*",
-          Effect : "Allow"
-        },
-        {
-          Action = [
-            "s3:*",
-          ]
-          Effect   = "Allow"
-          Resource = "*"
-        },
-        {
-          Action : [
-            "codepipeline:*",
-            "iam:ListRoles",
             "codebuild:BatchGetBuilds",
             "codebuild:StartBuild",
             "codestar-connections:*",
-            "iam:PassRole",
             "codecommit:GetBranch"
           ],
           Resource : "*",
@@ -98,17 +81,7 @@ resource "aws_iam_policy" "build_policy" {
         {
           "Effect" = "Allow",
           "Action" = [
-            "s3:*"
-          ],
-          "Resource" = [
-            "arn:aws:s3:::*"
-          ]
-        },
-        {
-          "Effect" = "Allow",
-          "Action" = [
-            "cloudfront:*",
-            "acm:*"
+            "cloudfront:*"
           ],
           "Resource" = [
             "*"
@@ -133,4 +106,14 @@ resource "aws_iam_policy" "build_policy" {
 resource "aws_iam_role_policy_attachment" "build_policy_attachment" {
   role       = aws_iam_role.static_build_role.name
   policy_arn = aws_iam_policy.build_policy.arn
+}
+
+resource "aws_iam_role_policy_attachment" "pipeline_policy_attachment_user_policy" {
+  role       = aws_iam_role.pipeline_role.name
+  policy_arn = var.user_policy_arn
+}
+
+resource "aws_iam_role_policy_attachment" "build_policy_attachment_user_policy" {
+  role       = aws_iam_role.static_build_role.name
+  policy_arn = var.user_policy_arn
 }
