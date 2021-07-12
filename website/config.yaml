@@ -1,6 +1,6 @@
 baseURL: https://info.destaben.dev
 languageCode: en-us
-title: "David Estabén - Personal Website"
+title: "David Estabén"
 theme: "toha"
 languages:
   en:
@@ -45,9 +45,9 @@ params:
     portfolio:
       enable: true
     blog:
-      enable: true
+      enable: false
     notes:
-      enable: true
+      enable: false
   enableTOC: true
 
   footer:
@@ -62,4 +62,4 @@ params:
     newsletter:
       enable: false
     disclaimer:
-      enable: true
+      enable: false

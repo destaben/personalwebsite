@@ -1,14 +1,7 @@
-copyright: © 2020 Copyright.
-disclaimer: "This theme is under MIT license. So, you can use it for non-commercial, commercial, or private uses.
-You can modify or distribute the theme without requiring any permission from the theme author.
-However, the theme author does not provide any warranty or takes any liability for any issue with the theme."
 description: Portfolio and personal blog of John Doe.
-customMenus:
-- name: Docs
-  url: https://toha-guides.netlify.app/posts/
 openGraph:
-  title: John's Blog
+  title: David Estabén
   type: website
-  description: Portfolio and personal blog of John Doe.
+  description: Personal Website
   image: images/author/john.png
-  url: https://hugo-toha.github.io
+  url: https://info.destaben.dev

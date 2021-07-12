@@ -1,10 +1,10 @@
-name: "John Doe"
-nickname: "John"
+name: "David Estabén"
+nickname: "David"
 greeting: "Hi, I am"
 image: "images/author/john.png"
 contactInfo:
-  email: "johndoe@example.com"
-  phone: "+0123456789"
+  email: "estaben.sti@gmail.com"
+  phone: "+34652022940"
 
 summary:
   - I am a Developer
