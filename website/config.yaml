@@ -34,9 +34,8 @@ enableEmoji: true
 params:
   background: /images/site/background.jpg
   logo:
-    main: /images/site/main-logo.png
-    inverted: /images/site/inverted-logo.png
-    favicon: /images/site/favicon.png
+    main: /images/site/logo.png
+    favicon: /images/site/logo.png
 
   gitRepo: https://github.com/destaben/personalwebsite
   gitBranch: source
