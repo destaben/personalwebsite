@@ -1,64 +1,61 @@
-# section information
 section:
   name: Experiences
   id: experiences
   enable: true
   weight: 3
   showOnNavbar: true
-  # Can optionally hide the title in sections
-  # hideTitle: true 
-
-# Your experiences
 experiences:
 - company:
-    name: Example Co.
-    url: "https://www.example.com"
-    location: Dhaka Branch
-    # company overview
-    overview: Example Co. is a widely recognized company for cloud-native development. It builds tools for Kubernetes.
+    name: Adidas
+    url: "https://www.adidas.co.uk"
+    location: Zaragoza
+    overview: It is the largest sportswear manufacturer in Europe, and the second largest in the world.
   positions:
-  - designation: Senior Software Engineer
-    start: Nov 2019
-    # don't provide end date if you are currently working there. It will be replaced by "Present"
-    # end: Dec 2020
-    # give some points about what was your responsibilities at the company.
+  - designation: Software Developer - SRE
+    start: Apr 2021
     responsibilities:
-    - Design and develop XYZ tool for ABC task
-    - Design, develop and manage disaster recovery tool [Xtool](https://www.example.com) that backup Kubernetes volumes, databases, and cluster's resource definition.
-    - Lead backend team.
-
-  - designation: Junior Software Engineer
-    start: Nov 2017
-    end: Oct 2019
-    responsibilities:
-    - Implement and test xyz feature for abc tool.
-    - Support client for abc tool.
-    - Learn k,d,w technology for xyz.
+    - Observability
+    - Automation
+    - Orchestration
 
 - company:
-    name: PreExample Co.
-    url: "https://www.example.com"
-    location: Nowhere
-    overview: PreExample Co. is a gateway company to enter into Example co. So, nothing special here.
+    name: NTT Data
+    url: "https://uk.nttdata.com"
+    location: Zaragoza
+    overview: It is a Japanese multinational information technology service and consulting company headquartered in Tokyo, Japan.
   positions:
-  - designation: Software Engineer
-    start: March 2016
-    end: May 2017
+  - designation: Cloud Engineer
+    start: May 2020
+    end: Apr 2021
     responsibilities:
-    - Write lots of example codes.
-    - Read lots of examples.
-    - See lots of example videos.
+    - Infrastructure
+    - Cost optimization
+    - Integration
 
 - company:
-    name: Intern Counting Company (ICC).
-    url: "https://www.example.com"
-    location: Intern Land
-    overview: Intern counting Company (ICC) is responsible for counting worldwide intern Engineers.
+    name: Darecode
+    url: "https://uk.nttdata.com"
+    location: Zaragoza
+    overview: It is a Japanese multinational information technology service and consulting company headquartered in Tokyo, Japan.
   positions:
-  - designation: Intern
-    start: Jun 2015
-    end: Jan 2016
+  - designation: Senior DevOps Engineer
+    start: Jan 2019
+    end: Apr 2020
     responsibilities:
-    - Count lost of interns.
-    - Count more interns.
-    - Count me as an intern.
+    - Operations
+    - Observability
+    - Maintenance
+
+- company:
+    name: Darecode
+    url: "https://darecode.com/"
+    location: Zaragoza
+    overview: It is a Japanese multinational information technology service and consulting company headquartered in Tokyo, Japan.
+  positions:
+  - designation: Senior DevOps Engineer
+    start: Jan 2019
+    end: Apr 2020
+    responsibilities:
+    - Operations
+    - Observability
+    - Maintenance

@@ -15,9 +15,7 @@ company:
 resume: "files/resume.pdf"
 
 # a summary about you
-summary: 'I am a passionate software engineer with x years of working experience. I built OSS tools for [Kubernetes](https://kubernetes.io/) using GO. My tools help people to deploy their workloads in Kubernetes. Sometimes, I work on some fun projects such as writing a theme, etc.'
-
-
+summary: 'Throughout my professional career I have developed different skills, in recent years I have focused my personal development on different new methodologies that approach IT systems from a methodological and procedural point of view. My job is mostly about understanding processes and transforming them into code, which involves code and infrastructure. Making it so that repetitive tasks are no longer necessary. Feel free to reach out me if you need more information.'
 socialLinks:
 - name: Email
   icon: "fas fa-envelope"
@@ -37,11 +35,30 @@ socialLinks:
 
 badges:
 - type: certification
-  name: Certified Kubernetes Security Specialist
-  url: "https://www.credly.com/org/the-linux-foundation/badge/exam-developer-certified-kubernetes-security-specialist"
-  badge: "https://images.credly.com/size/680x680/images/f4bf92ed-8985-40b2-bc07-2f9308780854/kubernetes-security-specialist-logo-examdev.png"
+  name: KNX Partner
+  badge: "https://www.vimar.com/cache/images/content-body/w720/vimar-logo-knx-8f4ao4n.jpg"
+
+- type: soft-skill-indicator
+  name: Communication
+  percentage: 90
+  color: blue
 
 - type: soft-skill-indicator
   name: Leadership
   percentage: 85
+  color: blue
+
+- type: soft-skill-indicator
+  name: Teamwork
+  percentage: 95
+  color: blue
+
+- type: soft-skill-indicator
+  name: Collaboration
+  percentage: 85
+  color: blue
+
+- type: soft-skill-indicator
+  name: Time management
+  percentage: 90
   color: blue

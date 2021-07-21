@@ -1,13 +1,11 @@
-# section information
 section:
   name: Education
   id: education
-  template: sections/education.html # Use "sections/education-alt.html for alternate template.
+  template: sections/education.html
   enable: true
   weight: 4
   showOnNavbar: true
-  # Can optionally hide the title in sections
-  # hideTitle: true
+
 
 degrees:
 - name: Ph.D in Quantum Cryptography

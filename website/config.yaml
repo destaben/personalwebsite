@@ -9,7 +9,7 @@ languages:
 
 server:
   headers:
-  - for: /**.html
+  - for: /*
     values:
       Cache-Control: max-age 86400
       Cache-Control: s-maxage 86400

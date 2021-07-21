@@ -1,15 +1,10 @@
-# section information
 section:
   name: Skills
   id: skills
   enable: true
   weight: 2
   showOnNavbar: true
-  # Can optionally hide the title in sections
-  # hideTitle: true
 
-# Your Skills.
-# Give a summary of you each skill in the summary section.
 skills:
 - name: Kubernetes
   logo: /images/sections/skills/kubernetes.png
@@ -44,6 +39,6 @@ skills:
   summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
   url: "https://git-scm.com/"
 
-- name: C++
-  logo: /images/sections/skills/c++.png
-  summary: "Know basic C/C++ programming. Used for contest programming and problem solving."
+- name: Terraform
+  logo: /images/sections/skills/terraform.png
+  summary: "Advanced usage with Terraform scripts, also focused in troubleshooting and security."
