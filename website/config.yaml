@@ -2,6 +2,7 @@ baseURL: https://info.destaben.dev
 languageCode: en-us
 title: "David Estabén"
 theme: "toha"
+enableRobotsTXT: true
 languages:
   en:
     languageName: English
