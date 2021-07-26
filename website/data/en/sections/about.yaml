@@ -31,9 +31,14 @@ socialLinks:
   url: "https://twitter.com/destaben"
 
 badges:
-- type: certification
-  name: KNX Partner
-  badge: "https://www.vimar.com/cache/images/content-body/w720/vimar-logo-knx-8f4ao4n.jpg"
+#- type: certification
+#  name: KNX Partner
+#  badge: "https://www.vimar.com/cache/images/content-body/w720/vimar-logo-knx-8f4ao4n.jpg"
+
+- type: soft-skill-indicator
+  name: Positivity
+  percentage: 95
+  color: blue
 
 - type: soft-skill-indicator
   name: Communication
@@ -56,6 +61,6 @@ badges:
   color: pink
 
 - type: soft-skill-indicator
-  name: Time management
+  name: Creatitivy
   percentage: 90
   color: yellow
