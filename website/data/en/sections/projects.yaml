@@ -22,7 +22,6 @@ projects:
   summary: Adidas SRE challenge
   tags: ["hobby", "academic"]
 
-projects:
 - name: Personal Website
   logo: /images/site/logo.png
   role: Creator
