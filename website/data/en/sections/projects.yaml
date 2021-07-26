@@ -18,6 +18,15 @@ projects:
   logo: /images/site/logo.png
   role: Creator
   timeline: "Feb 2020 - Mar 2020"
-  repo: https://github.com/destaben/challenge-sr
-  summary: Production-Grade Container Scheduling and Management.
+  repo: https://github.com/destaben/challenge-sre
+  summary: Adidas SRE challenge
+  tags: ["hobby", "academic"]
+
+projects:
+- name: Personal Website
+  logo: /images/site/logo.png
+  role: Creator
+  timeline: "Jun 2021 - Jul 2021"
+  repo: https://github.com/destaben/personalwebsite
+  summary: Personal website
   tags: ["hobby", "academic"]

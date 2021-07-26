@@ -1,4 +1,3 @@
-# section information
 section:
   name: About
   id: about
@@ -13,8 +12,6 @@ company:
   url: "https://www.adidas.co.uk"
 
 resume: "files/resume.pdf"
-
-# a summary about you
 summary: 'Throughout my professional career I have developed different skills, in recent years I have focused my personal development on different new methodologies that approach IT systems from a methodological and procedural point of view. My job is mostly about understanding processes and transforming them into code, which involves code and infrastructure. Making it so that repetitive tasks are no longer necessary. Feel free to reach out me if you need more information.'
 socialLinks:
 - name: Email
@@ -46,19 +43,19 @@ badges:
 - type: soft-skill-indicator
   name: Leadership
   percentage: 85
-  color: blue
+  color: green
 
 - type: soft-skill-indicator
   name: Teamwork
   percentage: 95
-  color: blue
+  color: orange
 
 - type: soft-skill-indicator
   name: Collaboration
   percentage: 85
-  color: blue
+  color: pink
 
 - type: soft-skill-indicator
   name: Time management
   percentage: 90
-  color: blue
+  color: yellow

@@ -8,17 +8,17 @@ section:
 skills:
 - name: Kubernetes
   logo: /images/sections/skills/kubernetes.png
-  summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for CRDs."
+  summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers and troubleshooting."
   url: "https://kubernetes.io/"
 
-- name: Go Development
-  logo: /images/sections/skills/go.png
+- name: Python Development
+  logo: /images/sections/skills/python.png
   summary: "Using as the main language for professional development. Capable of writing scalable, testable, and maintainable program."
-  url: "https://golang.org/"
+  url: "https://www.python.org/"
 
 - name: Cloud Computing
   logo: /images/sections/skills/cloud.png
-  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+  summary: "Worked with most of the major clouds such as GCP, AWS, Azure, Oracle, etc."
 
 - name: Docker
   logo: /images/sections/skills/docker.svg

@@ -34,9 +34,9 @@ experiences:
 
 - company:
     name: Darecode
-    url: "https://uk.nttdata.com"
+    url: "https://darecode.com/"
     location: Zaragoza
-    overview: It is a Japanese multinational information technology service and consulting company headquartered in Tokyo, Japan.
+    overview: It is a Spanish company that offers services to other companies. Headquartered in Zaragoza.
   positions:
   - designation: Senior DevOps Engineer
     start: Jan 2019
@@ -47,15 +47,29 @@ experiences:
     - Maintenance
 
 - company:
-    name: Darecode
-    url: "https://darecode.com/"
+    name: Network Solutions Control
+    url: "https://www.nscontrol.es/"
     location: Zaragoza
-    overview: It is a Japanese multinational information technology service and consulting company headquartered in Tokyo, Japan.
+    overview: It is a Spanish company that offers services to other companies. Headquartered in Madrid.
   positions:
-  - designation: Senior DevOps Engineer
-    start: Jan 2019
-    end: Apr 2020
+  - designation: DevOps Engineer - Software Developer
+    start: Apr 2018
+    end: Jan 2019
     responsibilities:
-    - Operations
-    - Observability
+    - Web Development
+    - DevOps
+    - Maintenance
+
+- company:
+    name: A&T Ingenieria
+    url: " https://atingenieria.net"
+    location: Zaragoza
+    overview: It is a Spanish company that offers services to other companies. Headquartered in Zaragoza.
+  positions:
+  - designation: Planner - Software Developer
+    start: Jul 2017
+    end: Feb 2028
+    responsibilities:
+    - Software Development
+    - FTTH
     - Maintenance
