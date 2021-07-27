@@ -38,7 +38,7 @@ badges:
 - type: soft-skill-indicator
   name: Positivity
   percentage: 95
-  color: purple
+  color: white
 
 - type: soft-skill-indicator
   name: Communication
