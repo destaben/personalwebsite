@@ -33,7 +33,7 @@ outputs:
 enableEmoji: true
 
 params:
-  background: /images/site/background.png
+  background: /images/site/background.jpg
   logo:
     main: /images/site/logo.png
     favicon: /images/site/logo.png
